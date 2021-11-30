@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xmlns:c="http://www.springframework.org/schema/c"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd
+   https://www.springframework.org/schema/context
+    https://www.springframework.org/schema/context/spring-context.xsd">
+     <!-- services -->
+
+<bean class="com.springcore.constructorinj.Person" name="person" c:name="Sourav Adak" c:personid="22" c:certificate-ref="cer" c:list="1,2,3,4,5">
+<!-- <constructor-arg value="Sourav Adak" />
+<constructor-arg value="22" type="int"/>
+<constructor-arg ref="cer"/> 
+<constructor-arg>
+<list>
+<value>1</value>
+<value>3</value>
+<value>2</value>
+</list>
+</constructor-arg>
+-->
+</bean>
+
+<bean class="com.springcore.constructorinj.Addition" name="add" >
+<constructor-arg value="12"  type="int" index="1" />
+<constructor-arg value="34"   type="int" index="0" />
+</bean>
+
+<bean class="com.springcore.constructorinj.Certificate" name="cer" 
+c:name="Java Spring" />
+
+
+
+
+</beans>
